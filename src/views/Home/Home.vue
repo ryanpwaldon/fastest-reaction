@@ -1,18 +1,26 @@
 <template>
   <div class="home">
-    <div class="content-container">
-      <div class="title-item">FASTEST<br>REACTION</div>
-      <router-link to="/instructions" class="button-item">
-        <BaseButton text="Start"/>
-      </router-link>
-    </div>
+    <BaseContainer>
+      <div class="content-container">
+        <BaseTitle text="FASTEST<br>TAP"/>
+        <router-link to="/instructions" class="button-item">
+          <BaseButton text="Start"/>
+        </router-link>
+      </div>
+    </BaseContainer>
   </div>
 </template>
 
 <script>
+import BaseContainer from '@/components/BaseContainer/BaseContainer'
+import BaseTitle from '@/components/BaseTitle/BaseTitle'
 import BaseButton from '@/components/BaseButton/BaseButton'
 export default {
-  components: { BaseButton }
+  components: {
+    BaseContainer,
+    BaseTitle,
+    BaseButton
+  }
 }
 </script>
 
@@ -20,20 +28,12 @@ export default {
 .home {
   width: 100%;
   height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 .content-container {
-  display: grid;
-  height: 60%;
-  align-content: space-between;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
-.title-item {
-  font-size: 4em;
-}
-.button-item {
-  justify-self: flex-start;
-}
-
 </style>

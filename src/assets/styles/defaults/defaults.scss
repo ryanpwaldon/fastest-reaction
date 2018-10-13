@@ -1,6 +1,8 @@
 * {
   box-sizing: border-box;
   -webkit-overflow-scrolling: touch;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   line-height: 1em;
 }
 
@@ -12,10 +14,6 @@ html, body, #app {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: 'Montserrat Bold';
-}
-
-#app {
-  padding: 1em;
 }
 
 a {

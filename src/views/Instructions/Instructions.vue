@@ -1,23 +1,29 @@
 <template>
   <div class="instructions">
-    <div class="content-container">
-      <div class="title-item">GOAL</div>
-      <div class="instructions-item">
-        Wait for the signal.<br>
-        Click the button.<br>
-        Be the fastest.
+    <BaseContainer>
+      <div class="content-container">
+        <BaseTitle text="GOAL"/>
+        <div class="instructions-item">
+          Lorem ipsum amet<br>consectetur elit<br>sed do eiusmod.
+        </div>
+        <router-link to="/countdown" class="button-item">
+          <BaseButton text="Start"/>
+        </router-link>
       </div>
-      <router-link to="/gameplay" class="button-item">
-        <BaseButton text="Start"/>
-      </router-link>
-    </div>
+    </BaseContainer>
   </div>
 </template>
 
 <script>
+import BaseContainer from '@/components/BaseContainer/BaseContainer'
+import BaseTitle from '@/components/BaseTitle/BaseTitle'
 import BaseButton from '@/components/BaseButton/BaseButton'
 export default {
-  components: { BaseButton }
+  components: {
+    BaseContainer,
+    BaseTitle,
+    BaseButton
+  }
 }
 </script>
 
@@ -25,24 +31,16 @@ export default {
 .instructions {
   width: 100%;
   height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 .content-container {
-  display: grid;
-  height: 60%;
-  align-content: space-between;
-}
-.title-item {
-  font-size: 4em;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .instructions-item {
-  font-size: 2em;
+  font-size: 1.9em;
   line-height: 140%;
 }
-.button-item {
-  justify-self: flex-start;
-}
-
 </style>
