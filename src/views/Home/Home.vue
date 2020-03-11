@@ -2,7 +2,7 @@
   <div class="home">
     <BaseContainer>
       <div class="content-container">
-        <BaseTitle text="FASTEST<br>TAP"/>
+        <BaseTitle text="FASTEST<br>REACTION"/>
         <router-link to="/instructions" class="button-item">
           <BaseButton text="Start"/>
         </router-link>

@@ -21,9 +21,13 @@ export default {
     BaseTitle
   },
   mounted () {
-    setTimeout(() => {
+    this.timeout = setTimeout(() => {
+      console.log('helo')
       this.$router.push('/gameplay/tap')
     }, 1000)
+  },
+  beforeDestroy () {
+    clearTimeout(this.timeout)
   }
 }
 </script>

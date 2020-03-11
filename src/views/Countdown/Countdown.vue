@@ -18,11 +18,12 @@ export default {
     BaseTitle
   },
   mounted () {
-    const tl = new TimelineMax({onComplete: () => {
-      this.$router.push('/gameplay/wait')
-    }})
-    tl.staggerFrom(this.$refs['content-container'].children, 1, {autoAlpha: 0, scale: 2, ease: Expo.easeOut}, -1, 0)
-    tl.staggerTo(this.$refs['content-container'].children, 1, {autoAlpha: 0, ease: Expo.easeOut}, -1, 1)
+    this.tl = new TimelineMax({onComplete: () => this.$router.push('/gameplay/wait')})
+    this.tl.staggerFrom(this.$refs['content-container'].children, 1, {autoAlpha: 0, scale: 2, ease: Expo.easeOut}, -1, 0)
+    this.tl.staggerTo(this.$refs['content-container'].children, 1, {autoAlpha: 0, ease: Expo.easeOut}, -1, 1)
+  },
+  beforeDestroy () {
+    this.tl.kill()
   }
 }
 </script>

@@ -15,6 +15,6 @@ export default {
 
 <style lang="scss" scoped>
 .base-title {
-  font-size: 4em;
+  font-size: 3em;
 }
 </style>
